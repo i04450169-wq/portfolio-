@@ -255,6 +255,138 @@ body {
 
 /* التواصل */
 #contact {
+  /* ===== أنيميشن ظهور العناصر ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* العناصر اللي هتظهر بأنيميشن */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* أنيميشن الهيرو عند التحميل */
+.hero-content {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* نبض خفيف للأيقونات */
+.project-icon {
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* تحسين ظهور الأزرار */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ===== قسم رحلة تعلمي ===== */
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-right: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  border-radius: 3px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.timeline-item:hover {
+  transform: translateX(-5px);
+  border-color: var(--accent);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  right: -38px;
+  top: 1.4rem;
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.25);
+}
+
+.timeline-date {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
   text-align: center;
 }
 
