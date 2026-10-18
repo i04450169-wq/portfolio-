@@ -285,3 +285,40 @@ footer {
     padding: 3rem 1.2rem;
   }
 }
+/* ===== قسم التواصل ===== */
+#contact {
+  text-align: center;
+}
+
+.contact-text {
+  color: var(--text-muted);
+  margin-bottom: 1.8rem;
+  font-size: 1.05rem;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* زرار واتساب */
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  border: 2px solid #25D366;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5b;
+  border-color: #1ebe5b;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+}
+
+/* تحسين شكل زرار الإيميل في قسم التواصل */
+#contact .btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(45, 212, 191, 0.35);
+}
