@@ -305,17 +305,14 @@ footer {
 
 /* زرار واتساب */
 .btn-whatsapp {
-  background: #25D366;
-  color: #fff;
-  border: 2px solid #25D366;
+  background: #25D366 !important;
+  color: #ffffff !important;
+  border: 2px solid #25D366 !important;
 }
 
 .btn-whatsapp:hover {
-  background: #1ebe5b;
-  border-color: #1ebe5b;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  background: #1ebe5b !important;
+  border-color: #1ebe5b !important;
 }
 
 /* تحسين شكل زرار الإيميل في قسم التواصل */
